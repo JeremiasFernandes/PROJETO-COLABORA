@@ -1,4 +1,0 @@
-[build]
-base = "."
-publish = "./build/"
-process.env.CI = "npm run build"
