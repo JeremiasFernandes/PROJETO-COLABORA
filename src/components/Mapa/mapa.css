@@ -1,0 +1,7 @@
+.leaflet-container{
+    width: 100vw;
+    height: 120vh;
+    z-index: 0;
+    position: absolute;
+    background-color: rgb(39, 38, 38);
+  }

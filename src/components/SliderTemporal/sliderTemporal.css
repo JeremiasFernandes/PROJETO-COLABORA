@@ -1,0 +1,14 @@
+.slider_temporal{
+/* bottom: 10rem; */
+position: absolute;
+/* left: 110rem; */
+top: 8rem;
+right: 4rem;
+}
+
+.slider_container{
+    position: relative;
+    -webkit-backdrop-filter: blur(1.2px);
+    backdrop-filter: blur(1.5px);
+    width: 100vw;
+}

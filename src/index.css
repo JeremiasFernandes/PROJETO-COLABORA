@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --primary-color: #fdda6f;
+  --primary-color-light: rgb(154, 94, 209);
+  --primary-color-dark: rgb(235, 205, 100);
+  --white-color: whitesmoke;
+  --hover-color: rgb(231, 207, 253);
+  --input-border-color: lightgrey;
+  --page-background-color: rgb(236, 236, 236);
+  --primary-black-color: rgb(49, 49, 49);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--page-background-color);
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+.form-button {
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  padding: 6px;
+}
+  .form-button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-dark);
+    box-shadow: 3px 4px 10px 2px rgba(30, 30, 30, 0.10);
+
+  }
+
+.primary-button {
+  outline: none;
+  border: none;
+  text-decoration: unset;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  padding: 0.5rem 3rem 0.5rem 3rem;
+}
+  .primary-button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-dark);
+    box-shadow: 3px 4px 10px 2px rgba(30, 30, 30, 0.10);
+  }
+
+.secondary-button {
+    outline: none;
+    border: none;
+    text-decoration: unset;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 1rem 2rem 1rem 2rem;
+    
+  }
+    .secondary-button:hover {
+      cursor: pointer;
+      background-color: rgb(66, 65, 65);
+    }
+  
+
+.form-label {
+  color: rgb(60, 60, 60);
+  font-size: 12px;
+}
+
+.link {
+  color: rgb(60, 60, 60);
+  margin-left: 2px;
+  font-weight: bold;
+}
+  .link:visited {
+    color: rgb(60, 60, 60);
+  }
+
+
+input {
+  background-color: rgb(236, 236, 236);
+}
+

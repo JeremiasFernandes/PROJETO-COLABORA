@@ -1,0 +1,41 @@
+#select_tipo {
+   
+    width: 28rem;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 30px;
+    padding: 0,0,0,1rem;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #ddd;
+}
+
+.marcadores-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: center; */
+  
+    width: 28rem;
+    height: auto;
+    border-radius: 4px;
+   
+ 
+    z-index: 1;
+
+}  
+.marcadores-form_input{
+    outline: none;
+    border: none;
+    padding:5px;
+    padding-left: 10px;
+    width: 28rem;
+    border: 1px solid var(--input-border-color);
+    margin-bottom: 4px;
+    border-radius: 4px;
+
+}
+
+.marcadores-button {
+    margin-bottom: 20px;
+    color:black;
+    margin-top: 20px;
+}
