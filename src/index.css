@@ -29,7 +29,7 @@ html {
 .form-button {
   outline: none;
   border: none;
-  color: white;
+  color: rgb(6, 6, 6);
   border-radius: 3px;
   background-color: var(--primary-color);
   padding: 6px;
