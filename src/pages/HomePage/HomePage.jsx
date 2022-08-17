@@ -26,7 +26,7 @@ export function HomePage() {
                <Mapa>
                </Mapa>
                <AlertDialogSlide>
-                </AlertDialogSlide>
+                </AlertDialogSlide>             
                 
             </div>
             

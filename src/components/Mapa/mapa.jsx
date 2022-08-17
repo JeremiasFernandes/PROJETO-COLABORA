@@ -4,12 +4,14 @@ import { useContext, useEffect } from 'react';
 import './mapa.css'
 import marcadoresContext from '../../context/marcadoresContext';
 import AlertDialogSlide from '../MuiDialog/MuiDialog';
+import LoginContext from '../../context/LoginContext';
 
 
 
 export function Mapa(){
     const context = useContext(sliderContext)
     const marcadores_context = useContext(marcadoresContext)
+    const loginContext = useContext(LoginContext)
     
     
     
@@ -25,10 +27,12 @@ export function Mapa(){
     const MapEvents = () => {
         useMapEvents({
           click(e) {
-            marcadores_context.setLat(e.latlng.lat)
-            marcadores_context.setLong(e.latlng.lng)
-            marcadores_context.setOpen(true)
-          },
+            if (loginContext.isLogged){
+                marcadores_context.setLat(e.latlng.lat)
+                marcadores_context.setLong(e.latlng.lng)
+                marcadores_context.setOpen(true)
+            }
+        },
         });
         return false;
     }

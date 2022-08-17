@@ -12,7 +12,7 @@ export default function AppRoutes() {
   const context = useContext(LoginContext);
   return (
     <>
-        <Navbar />
+        <Navbar/>
         <Routes>
             <Route path="/" exact element={<HomePage />}/>
             <Route path="/Login" exact element={<LoginPage />} />

@@ -1,6 +1,6 @@
 // https://dev.to/rafacdomin/autenticacao-no-react-com-context-api-e-hooks-4bia
 
-import React, { createContext } from 'react';
+import React, { createContext, useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import api from '../services/api';
@@ -23,15 +23,18 @@ export const LoginProvider = ({ children }) => {
     let navigate = useNavigate();
     
  
-    
+    useEffect(()=>{
+      console.log(isLogged)
+    }, [isLogged])
 
     function Login(data) {
+        
         api.get(`/users/${data.username}/${data.password}`)
         .then((response)=>{
           setIsLogged(true);
           setUserId(response.data.user_id);
           setUserName(response.data.username);
-          navigate("/colabora", { replace: true }) 
+          navigate("/", { replace: true }) 
         })
         .catch((error)=>{
           alert(error.response.data.detail);
@@ -46,7 +49,7 @@ export const LoginProvider = ({ children }) => {
     }
     
     return (
-      <LoginContext.Provider value={{ isLogged: false, Login,userId,setUserId,isLogged,setIsLogged,Logout,userName,setUserName}}>
+      <LoginContext.Provider value={{Login,userId,setUserId,isLogged,setIsLogged,Logout,userName,setUserName}}>
         {children}
       </LoginContext.Provider>
     );
