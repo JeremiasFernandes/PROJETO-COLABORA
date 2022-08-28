@@ -74,13 +74,13 @@ const onSubmit = data => {
     latitude: parseFloat(marcadores_context.Lat),
     longitude: parseFloat(marcadores_context.Long),
     ano: String(datapciked),
-    dono_id: parseInt(login_context.userId),
+    dono_id: login_context.userId,
     Tipo: String(select.options[select.selectedIndex].value),
     Nome: String(data.NomeOcupacao),
     Org: String(data.Organizacao),
     NumFamilias: String(data.NumeroFamilias),
   }
-
+  
 
   api.post(`/cadastro/marcador`,Marcador)
         .then((response)=>{

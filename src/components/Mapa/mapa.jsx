@@ -27,7 +27,7 @@ export function Mapa(){
     const MapEvents = () => {
         useMapEvents({
           click(e) {
-            if (loginContext.isLogged){
+            if (loginContext.isLogged === '1'){
                 marcadores_context.setLat(e.latlng.lat)
                 marcadores_context.setLong(e.latlng.lng)
                 marcadores_context.setOpen(true)

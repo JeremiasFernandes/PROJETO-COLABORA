@@ -5,7 +5,7 @@
   --primary-color: #fdda6f;
   --primary-color-light: rgb(154, 94, 209);
   --primary-color-dark: rgb(235, 205, 100);
-  --white-color: whitesmoke;
+  --white-color: rgb(255, 255, 255);
   --hover-color: rgb(231, 207, 253);
   --input-border-color: lightgrey;
   --page-background-color: rgb(236, 236, 236);
@@ -63,13 +63,14 @@ html {
     text-decoration: unset;
     font-size: 2rem;
     color: rgb(255, 255, 255);
+    background-color: var(--secondary-color);
     border-radius: 4px;
     padding: 1rem 2rem 1rem 2rem;
     
   }
     .secondary-button:hover {
       cursor: pointer;
-      background-color: rgb(66, 65, 65);
+      background-color: rgb(134, 126, 126);
     }
   
 

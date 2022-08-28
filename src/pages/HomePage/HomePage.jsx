@@ -9,6 +9,9 @@ import { Slider_temporal } from '../../components/SliderTemporal/sliderTemporal'
 import sliderContext from '../../context/sliderContext';
 import { Mapa } from '../../components/Mapa/mapa';
 import AlertDialogSlide from '../../components/MuiDialog/MuiDialog';
+import ModalCadastro from '../../components/ModalCadastro/ModalCadastro';
+import { LoginForm } from '../../components/LoginForm/LoginForm';
+import { ModalLogin } from '../../components/ModalLogin/ModalLogin';
 
 
 //// token de acesso ao mapbox////
@@ -18,6 +21,7 @@ const access_token = 'pk.eyJ1IjoiamVyZW1pYXNmZXJuYW5kZXMiLCJhIjoiY2wzcmxqNHVzMGt
 
 export function HomePage() {
     const context = useContext(LoginContext);
+    console.log(context.userId);
   
     return (
         <>
@@ -26,7 +30,11 @@ export function HomePage() {
                <Mapa>
                </Mapa>
                <AlertDialogSlide>
-                </AlertDialogSlide>             
+                </AlertDialogSlide>   
+                <ModalCadastro>
+                </ModalCadastro>   
+                <ModalLogin>
+                </ModalLogin>       
                 
             </div>
             
