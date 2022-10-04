@@ -15,6 +15,7 @@
     "axios": "^0.26.1",
     "data-fns": "^0.1.8",
     "formik": "^2.2.9",
+    "leaflet": "^1.9.1",
     "react": "^17.0.0",
     "react-datepicker": "^4.8.0",
     "react-dom": "^17.0.0",

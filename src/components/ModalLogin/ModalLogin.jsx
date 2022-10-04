@@ -3,18 +3,17 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import './ModalLogin.css'
-import api from '../../services/api';
 import { useContext } from 'react';
-import ModalLoginContext from './ModalLogin_Context';
 import LoginContext from '../../context/LoginContext';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import * as React from 'react';
+import Modal_LoginContext from './ModalLogin_Context';
+import Modal_CadastroContext from '../ModalCadastro/ModalCadastroContext';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -22,8 +21,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export function ModalLogin() {
 
-    const context = useContext(ModalLoginContext);
     const Login_Context = useContext(LoginContext);
+    const modal_login_context = useContext(Modal_LoginContext);
+    const modal_cadastro_context = useContext(Modal_CadastroContext);
 
     const schema = yup.object({
         username: yup.string().required('Por favor forneça seu usuário'),
@@ -37,16 +37,16 @@ export function ModalLogin() {
     };
 
     const handleClose = () => {
-        context.setIsOpen(false);
+        modal_login_context.setIsOpen(false);
       };
       
-      if (Login_Context.isLogged == '1'){
-        context.setIsOpen(false);
+      if (Login_Context.isLogged === '1'){
+        modal_login_context.setIsOpen(false);
       };
 
 return (<div>
     <Dialog
-      open={context.isOpen}
+      open={modal_login_context.isOpen}
       TransitionComponent={Transition}
       keepMounted
       onClose={handleClose}
@@ -70,7 +70,10 @@ return (<div>
             <button type="submit" className='form-button login-button'>Login</button>
 
             <p style={{textAlign: 'center',marginRight: '10px'}}>
-                Não possui uma conta? <Link to='/Cadastro' className='link'>Cadastre-se</Link> 
+                Não possui uma conta? <Link onClick={()=>{
+                  modal_login_context.setIsOpen(false);
+                  modal_cadastro_context.setIsOpen(true);
+                }} to='/' className='link'>Cadastre-se</Link> 
             </p>
 
         </form>

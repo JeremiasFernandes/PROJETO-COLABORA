@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
 import Select from '@material-ui/core/Select/Select';
 import MenuItem from '@material-ui/core/MenuItem/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import Box from '@mui/material/Box';
-
-
 
 
 
@@ -15,13 +10,7 @@ export const ControlledSelect = ({ name, value, onFocus, onChange, onBlur }) => 
     useEffect(() => setLocalValue(value ?? ''), [value]);       // we want to update local value on prop value change
     
 
-    
-    const handleFocus = () => {
-        if (onFocus) {
-            onFocus();
-        }
-    };
-    
+
     const handleChange = (e) => {
         const value = e.target.value;
         setLocalValue(value);
@@ -30,11 +19,6 @@ export const ControlledSelect = ({ name, value, onFocus, onChange, onBlur }) => 
         }
     };
     
-    const handleBlur = (e) => {
-        if (onBlur) {
-            onBlur(e.target.value);
-        }
-    };
 
     const Estados = [
         {label:'Rondônia',value: 11},

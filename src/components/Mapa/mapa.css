@@ -5,3 +5,186 @@
     position: absolute;
     background-color: rgb(39, 38, 38);
   }
+
+  .marker-pin-1 {
+    width: 25px;
+    height: 25px;
+    border-radius: 80% 80% 80% 0;
+    background: rgb(248, 97, 97);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+ 
+  }
+  .marker-pin-1::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+
+  .marker-pin-2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(240, 159, 9);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-2::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-3 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(224, 203, 10);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-3::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-4 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(43, 194, 13);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-4::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: rgb(24, 24, 24);
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-5 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(19, 122, 148);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-5::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-6 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(42, 39, 212);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-6::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-7 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(173, 38, 207);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-7::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+  .marker-pin-8 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70% 70% 70% 0;
+    background: rgb(168, 23, 35);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+  }
+  .marker-pin-8::after{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 3px;
+    background: rgb(119, 44, 44);
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+
+  /* .custom-div-icon i {
+     position: absolute;
+     width: 25px;
+     font-size: 22px;
+     left: 0;
+     right: 0;
+     margin: 10px auto;
+     text-align: center;
+  } */

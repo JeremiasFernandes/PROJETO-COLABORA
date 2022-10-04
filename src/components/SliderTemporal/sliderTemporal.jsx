@@ -1,26 +1,19 @@
 import './sliderTemporal.css'
 import * as React from 'react';
-import {useState} from 'react';
+
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme, ThemeProvider} from '@mui/material/styles';
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import api from '../../services/api';
-import LoginContext from '../../context/LoginContext';
+
+
 import { useContext } from 'react';
 
-import { createContext } from 'react';
+
 import sliderContext from '../../context/sliderContext';
 
 
 
 
-const sliderStyles= makeStyles({
-  slider: {
-    '& .MuiSlider-markLabel' : {fontFamily: 'Vazir' , fontSize: "12px"}
-  }
-})
 
 
 const theme = createTheme({

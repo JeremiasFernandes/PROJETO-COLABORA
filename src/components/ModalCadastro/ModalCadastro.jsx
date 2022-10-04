@@ -2,38 +2,20 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import * as React from 'react';
-import { useContext, Fragment } from 'react';
-import marcadoresContext from '../../context/marcadoresContext';
-import { Grid, Paper,Typography } from '@material-ui/core'
-import { TextField } from '@material-ui/core'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
+import { useContext } from 'react';
 import ControlledSelect from '../Select/selecControlled';
-import MenuItem from '@material-ui/core/MenuItem/MenuItem';
-import Select from '@material-ui/core/Select/Select';
-import { useEffect, useState } from 'react';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Box from '@mui/material/Box';
-import { useNavigate } from "react-router-dom";
-import Stack from '@mui/material/Stack';
-import { useForm } from "react-hook-form";
+import { useState } from 'react';
 import './ModalCadastro.css'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import "react-datepicker/dist/react-datepicker.css";
 import api from '../../services/api'
-import LoginContext from '../../context/LoginContext';
-import sliderContext from '../../context/sliderContext';
 import Modal_CadastroContext from './ModalCadastroContext';
 import ControlledSelect_cidades from '../Select/selectControlled_Cidades';
 import { Link } from 'react-router-dom';
-
+import Modal_LoginContext from '../ModalLogin/ModalLogin_Context';
+import { useForm } from 'react-hook-form';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -41,29 +23,10 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function ModalCadastro() {
-  const marcadores_context = useContext(marcadoresContext)
-  const login_context = useContext(LoginContext)
-  const slider_context = useContext(sliderContext)
-  const modal_cadastro_context = useContext(Modal_CadastroContext)
+  const modal_cadastro_context = useContext(Modal_CadastroContext);
+  const modal_login_context = useContext(Modal_LoginContext);
 
-  var select = document.getElementById('select_tipo');
-  const [datapciked, setDatapicked]  = useState(null)
   const { register, handleSubmit, formState:{ errors }} = useForm();
-
-
-
-
-// const schema = yup.object({
-//     username: yup.string().required('Por favor forneça seu usuário'),
-
-//     password: yup.string().required('Por favor forneça sua senha').min(6,'A senha deve possuir ao menos 6 caracteres').max(10,'A senha deve possuir no máximo 10 caracteres'),
-
-//     passwordConfirm: yup.string().required('Por favor confirme sua senha').oneOf([yup.ref('password'), null], 'As senhas não coincidem'),
-
-// }).required();
-
-// const { register, HandleSubmit, formState:{ errors }} = useForm({resolver: yupResolver(schema)});
-let navigate = useNavigate();
 
     const onSubmit = data => {
         console.log(data.DataNasc)
@@ -176,7 +139,10 @@ let navigate = useNavigate();
                 <button type="submit" className='form-button SignUp-button'>Cadastrar</button>
 
                 <p style={{textAlign: 'center',marginRight: '10px'}}>
-                    Já possui uma conta? <Link to='/Login' className='link'>Entrar</Link> 
+                    Já possui uma conta? <Link onClick={()=>{
+                      modal_cadastro_context.setIsOpen(false);
+                      modal_login_context.setIsOpen(true);
+                    }} to='/' className='link'>Entrar</Link> 
                 </p>
             </form>
                   

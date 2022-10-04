@@ -1,25 +1,17 @@
-import React, { createContext, useEffect } from 'react';
+import React, { createContext } from 'react';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
 
-//types com TS
-
-// interface AuthContextData {
-//     signed: boolean;
-//     Login(): Promise<void>;
-// }
-
-const ModalLoginContext = createContext({});
+const Modal_LoginContext = createContext({});
 
 export const LoginModal = ({ children }) => {
 
     const [isOpen,setIsOpen] = useState(false);
     
     return (
-      <ModalLoginContext.Provider value={{isOpen, setIsOpen}}>
+      <Modal_LoginContext.Provider value={{isOpen, setIsOpen}}>
         {children}
-      </ModalLoginContext.Provider>
+      </Modal_LoginContext.Provider>
     );
 };
 
-export default ModalLoginContext;
+export default Modal_LoginContext;

@@ -39,15 +39,12 @@ const RegistrationForm = () => {
                 <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                     {(props) => (
                         <Form noValidate>
-                            {/* <TextField label='Name' name="name" fullWidth value={props.values.name}
-                    onChange={props.handleChange} /> */}
-
+                     
                             <Field as={TextField} name='name' label='Name' fullWidth
                                 error={props.errors.name && props.touched.name}
                                 helperText={<ErrorMessage name='name' />} required />
 
-                            {/* <TextField label='Email' name='email' type='Email' fullWidth 
-                    {...props.getFieldProps('email')}/> */}
+                            
 
                             <Field as={TextField} name='email' label='Email' fullWidth
                                 error={props.errors.email && props.touched.email}

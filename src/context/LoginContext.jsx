@@ -1,16 +1,10 @@
-// https://dev.to/rafacdomin/autenticacao-no-react-com-context-api-e-hooks-4bia
 
 import React, { createContext, useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import ModalLoginContext from '../components/ModalLogin/ModalLogin_Context';
 import api from '../services/api';
-//types com TS
 
-// interface AuthContextData {
-//     signed: boolean;
-//     Login(): Promise<void>;
-// }
 
 const LoginContext = createContext({});
 

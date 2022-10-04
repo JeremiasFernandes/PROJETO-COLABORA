@@ -3,10 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import './LoginForm.css'
-import api from '../../services/api';
 import { useContext } from 'react';
 import LoginContext from '../../context/LoginContext';
-
 export function LoginForm() {
 
     const context = useContext(LoginContext);

@@ -2,24 +2,13 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import * as React from 'react';
-import { useContext, Fragment } from 'react';
+import { useContext } from 'react';
 import marcadoresContext from '../../context/marcadoresContext';
-import RegistrationForm from './CadastroMarcadores';
-import { Grid, Paper,Typography } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
-import ControlledSelect from '../Select/selecControlled';
-import MenuItem from '@material-ui/core/MenuItem/MenuItem';
-import Select from '@material-ui/core/Select/Select';
-import { useEffect, useState } from 'react';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Box from '@mui/material/Box';
+import {useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 import { useForm } from "react-hook-form";
@@ -48,13 +37,6 @@ export default function AlertDialogSlide() {
   var select = document.getElementById('select_tipo');
   const [datapciked, setDatapicked]  = useState(null)
   const { register, handleSubmit, formState:{ errors }} = useForm();
-
-  const [localValue, setLocalValue] = useState(null);  // we want to keep value locally
-  const [value, setValue] = useState(null)
-
-  const handleChange = (e) => {
-   setLocalValue(e.target.value)
-};
 
 
 // const schema = yup.object({
@@ -96,9 +78,7 @@ const onSubmit = data => {
   
 };
 
-  const handleClickOpen = () => {
-    marcadores_context.setOpen(true);
-  };
+
 
   const handleClose = () => {
     marcadores_context.setOpen(false);
