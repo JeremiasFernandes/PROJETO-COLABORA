@@ -119,7 +119,7 @@ const onSubmit = data => {
                                 <option value={"Conjunto de casas"}>Conjunto de casas</option>
                                 <option value={"Favela"}>Favela</option>
                                 <option value={"Prédio Verticalizado"}>Prédio Verticalizado</option>
-                                <option value={"Instalção fabril/galpão"}>Instalção fabril/galpão</option>
+                                <option value={"Instalação fabril/galpão"}>Instalação fabril/galpão</option>
                                 <option value={"Edifício Institucional/Equipamento público"}>Edifício Institucional/Equipamento público</option>
                                 <option value={"Outro"}>Outro</option>
                           </select>

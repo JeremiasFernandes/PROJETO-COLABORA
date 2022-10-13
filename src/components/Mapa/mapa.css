@@ -1,3 +1,6 @@
+:root {
+  --color: rgba(0, 0, 0, 0.85);
+}
 .leaflet-container{
     width: 100vw;
     height: 120vh;
@@ -13,8 +16,8 @@
     background: rgb(248, 97, 97);
     position: absolute;
     transform: rotate(-45deg);
-    left: 50%;
-    top: 50%;
+    left: 20%;
+    top: 20%;
     margin: -15px 0 0 -15px;
  
   }
@@ -23,7 +26,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: rgb(0, 0, 0);
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 
@@ -46,7 +49,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: #fff;
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -67,7 +70,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: #fff;
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -88,7 +91,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: rgb(24, 24, 24);
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -109,7 +112,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: #fff;
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -118,7 +121,7 @@
     width: 25px;
     height: 25px;
     border-radius: 70% 70% 70% 0;
-    background: rgb(42, 39, 212);
+    background: rgb(237, 220, 250);
     position: absolute;
     transform: rotate(-45deg);
     left: 50%;
@@ -130,7 +133,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: #fff;
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -151,7 +154,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: #fff;
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
@@ -172,7 +175,7 @@
     width: 19px;
     height: 19px;
     margin: 3px 0 0 3px;
-    background: rgb(119, 44, 44);
+    background: var(--color);
     position: absolute;
     border-radius: 50%;
 }
